@@ -1,7 +1,11 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+
+	"github.com/Guanatos/stringutil"
+)
 
 func main() {
-	fmt.Printf("Hello, World\n")
+	fmt.Printf(stringutil.Reverse("Hello, Daniel\n"))
 }
