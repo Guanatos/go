@@ -2,6 +2,7 @@ package main
 
 import "fmt"
 import "sync"
+import "time"
 
 var wg sync.WaitGroup
 
@@ -29,6 +30,7 @@ func bar(){
 func foo2(){
         for i := 0; i < 45; i++ {
                 fmt.Println("Foo:",i)
+		time.Sleep(time.Duration(3 * time.Millisecond))
         }
 	wg.Done()
 }
@@ -36,6 +38,7 @@ func foo2(){
 func bar2(){
         for i := 0; i < 45; i++ {
                 fmt.Println("Bar:",i)
+		time.Sleep(time.Duration(20 * time.Millisecond))
         }
 	wg.Done()
 }
