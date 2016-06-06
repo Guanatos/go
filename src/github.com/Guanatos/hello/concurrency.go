@@ -3,8 +3,13 @@ package main
 import "fmt"
 import "sync"
 import "time"
+import "runtime"
 
 var wg sync.WaitGroup
+
+func init(){
+	runtime.GOMAXPROCS(runtime.NumCPU())
+}
 
 func main(){
 //	foo()
