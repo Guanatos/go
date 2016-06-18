@@ -1,3 +1,4 @@
 #!/bin/sh
+#####################################
 export GOPATH=/home/danunora/work
 export GOBIN=/home/danunora/work/bin
